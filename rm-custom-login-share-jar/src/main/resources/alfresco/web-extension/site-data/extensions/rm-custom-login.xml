@@ -9,6 +9,10 @@
                     <targetPackageRoot>org.alfresco.components.head</targetPackageRoot>
                     <sourcePackageRoot>dk.magenta.rm.login</sourcePackageRoot>
                 </customization>
+                <customization>
+                    <targetPackageRoot>org.alfresco.components.guest</targetPackageRoot>
+                    <sourcePackageRoot>dk.magenta.rm.login</sourcePackageRoot>
+                </customization>
             </customizations>
         </module>
     </modules>
