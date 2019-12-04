@@ -1,0 +1,8 @@
+alf_data_dev
+alfresco.log
+target/
+share.log
+solr.log
+.idea
+*.iml
+
