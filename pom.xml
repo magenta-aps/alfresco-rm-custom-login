@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>dk.magenta.rm.login</groupId>
     <artifactId>rm-custom-login</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>AIO - SDK 3.0</name>
     <description>All-In-One (AIO) project for SDK 3.0</description>
     <packaging>pom</packaging>
@@ -23,9 +24,9 @@
         <alfresco.data.location>${session.executionRootDirectory}/alf_data_dev</alfresco.data.location>
 
         <!-- Duplicated with alfresco.solrHome in the plugin, we need them out here to do filtering -->
-        <solr.home>${alfresco.data.location}/solr</solr.home>
+      <!--  <solr.home>${alfresco.data.location}/solr</solr.home>
         <solr.model.dir>${solr.home}/alfrescoModels</solr.model.dir>
-        <solr.content.dir>${solr.home}/index</solr.content.dir>
+        <solr.content.dir>${solr.home}/index</solr.content.dir>-->
 
         <!-- Properties used in dependency declarations, you don't need to change these -->
         <alfresco.groupId>org.alfresco</alfresco.groupId>
@@ -75,12 +76,6 @@
             <artifactId>httpclient</artifactId>
             <version>4.5.2</version>
             <scope>test</scope>
-        </dependency>
-
-        <!-- The main Alfresco Repo dependency for compiling Java code in src/main/java -->
-        <dependency>
-            <groupId>${alfresco.groupId}</groupId>
-            <artifactId>alfresco-repository</artifactId>
         </dependency>
 
         <!-- Bring in Spring Context so we can use ApplicationContext, ApplicationContextAware etc -->
@@ -443,6 +438,7 @@
             <url>https://artifacts.alfresco.com/nexus/content/groups/private</url>
         </repository>
     </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>alfresco-plugin-public</id>
@@ -457,8 +453,8 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-<modules>  <module>rm-custom-login-platform-jar</module>
-    <module>rm-custom-login-share-jar</module>
-    <module>integration-tests</module>
-  </modules>
+
+    <modules>
+        <module>rm-custom-login-share-jar</module>
+    </modules>
 </project>
